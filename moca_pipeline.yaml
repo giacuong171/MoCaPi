@@ -1,0 +1,9 @@
+name: moca_pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  - default
+dependencies:
+  - snakemake=7.32.4=hdfd78af_1
+  - snakemake-minimal=7.32.4=pyhdfd78af_0 

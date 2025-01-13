@@ -1,0 +1,15 @@
+samples: "samplesheet.csv"
+result_dir: "/data/cephfs-1/home/users/phgi10_c/work/Exec/thesis/test_pipeline/result"
+containers:
+  mindagap: "https://depot.galaxyproject.org/singularity/mindagap:0.0.2--pyhdfd78af_1" #stable version for singularity
+  baysor: "docker://maximilianheeg/baysor:v0.6.2" #stable version for singularity
+segmentation:
+  cellpose:
+    models_path: "/data/cephfs-1/home/users/phgi10_c/work/Exec/internship/model" #Required
+    diameter: 50
+    flow_threshold: 0.5
+    pretrained_model: 'cyto' #'cyto3', 'cyto2', 'cyto','nuclei'
+  baysor:
+    no-ncv-estimation: True
+    n-clusters: 1
+    prior-segmentation-confidence: 0.9
